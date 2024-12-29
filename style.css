@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(45deg, #1e90ff, #ff7f50);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    padding: 50px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile {
+    margin: 20px auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #ffa07a;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin: 10px 0;
+}
+
+.date {
+    font-weight: bold;
+    color: #f0e68c;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffa07a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Animation des cadeaux */
+.falling-gifts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.gift {
+    position: absolute;
+    width: 50px;
+    animation: fall 5s infinite;
+}
+
+.gift:nth-child(1) { left: 20%; animation-delay: 0s; }
+.gift:nth-child(2) { left: 50%; animation-delay: 1s; }
+.gift:nth-child(3) { left: 80%; animation-delay: 2s; }
+
+@keyframes fall {
+    0% { top: -100px; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}
